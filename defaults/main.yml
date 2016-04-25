@@ -1,0 +1,5 @@
+---
+
+postgres_client_repo_url: 'http://apt.postgresql.org/pub/repos/apt/'
+postgres_client_repo_key_url: 'https://www.postgresql.org/media/keys/ACCC4CF8.asc'
+postgres_client_repo_key_id: 'ACCC4CF8'

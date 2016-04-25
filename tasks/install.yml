@@ -1,0 +1,16 @@
+---
+
+- name: postgresql-client | add repo key
+  apt_key: url='{{postgres_client_repo_key_url}}' id='{{postgres_client_repo_key_id}}' state='present'
+  register: apt_key
+
+- name: postgresql-client | add  repository
+  apt_repository: repo='deb {{postgres_client_repo_url}} trusty-pgdg main' state='present'
+  register: postgres_client_repo
+
+- name: postgresql-client | apt-get update
+  apt: update_cache='yes'
+  when: postgres_client_repo | changed
+
+- name: postgresql-client | install postgresql-9.4
+  apt: name='postgresql-9.4' state='latest' update_cache='yes' cache_valid_time='3600'
