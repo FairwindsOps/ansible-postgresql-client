@@ -1,10 +1,10 @@
-# Ansible role for New Relic
+# Ansible role for the Postgresql client.
 
 ## Purpose
 
+Installs postgresql-client-9.4
 
 ## Example
 
-## Variable
-There are two variables that need to be set: `postgres_client_repo_key_id` &
-`postgres_client_license_key`
+roles:
+  - ansible-postgresql-client
