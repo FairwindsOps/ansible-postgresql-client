@@ -13,4 +13,4 @@
   when: postgres_client_repo | changed
 
 - name: postgresql-client | install postgresql-9.4
-  apt: name='postgres_client_version' state='latest' update_cache='yes' cache_valid_time='3600'
+  apt: name='{{ postgres_client_version }}' state='latest' update_cache='yes' cache_valid_time='3600'
