@@ -13,5 +13,5 @@ describe package('postgresql-client-9.4') do
 end
 
 describe command('psql --version') do
-  its(:stdout) { should match /9.4.7/ }
+  its(:stdout) { should match /9.4.*/ }
 end
